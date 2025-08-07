@@ -27,12 +27,12 @@ config.gameSettings = {
     { name = "prevent merchant equipping", value = false },
     { name = "enchanted weapons are magical", value = true },
     { name = "rebalance soul gem values", value = false },
-    { name = "barter disposition change is permanent", value = false },
-    { name = "strength influences hand to hand", value = 0 },
+    { name = "barter disposition change is permanent", value = true },
+    { name = "strength influences hand to hand", value = 1 },
     { name = "use magic item animations", value = false },
     { name = "normalise race speed", value = false },
     { name = "uncapped damage fatigue", value = false },
-    { name = "NPCs avoid collisions", value = false },
+    { name = "NPCs avoid collisions", value = true },
     { name = "swim upward correction", value = false },
     { name = "trainers training skills based on base skill", value = true },
     { name = "always allow stealing from knocked out actors", value = false }
@@ -89,25 +89,25 @@ config.allowWildernessRest = true
 config.allowWait = true
 
 -- Whether journal entries should be shared across the players on the server or not
-config.shareJournal = true
+config.shareJournal = false
 
 -- Whether faction ranks should be shared across the players on the server or not
-config.shareFactionRanks = true
+config.shareFactionRanks = false
 
 -- Whether faction expulsion should be shared across the players on the server or not
 config.shareFactionExpulsion = false
 
 -- Whether faction reputation should be shared across the players on the server or not
-config.shareFactionReputation = true
+config.shareFactionReputation = false
 
 -- Whether dialogue topics should be shared across the players on the server or not
-config.shareTopics = true
+config.shareTopics = false
 
 -- Whether crime bounties should be shared across players on the server or not
 config.shareBounty = false
 
 -- Whether reputation should be shared across players on the server or not
-config.shareReputation = true
+config.shareReputation = false
 
 -- Whether map exploration should be shared across players on the server or not
 config.shareMapExploration = false
@@ -116,7 +116,7 @@ config.shareMapExploration = false
 config.shareVideos = true
 
 -- Whether mobs and npcs in the game should be shared for all players when killed
-config.shareKills = true
+config.shareKills = false
 
 -- Which clientside script records should be blanked out so they are not run
 -- Note: By default, the original character generation scripts are included
@@ -191,18 +191,18 @@ config.respawnAtTribunalTemple = true
 config.forbiddenCells = { "ToddTest" }
 
 -- The maximum value that any attribute except Speed is allowed to have
-config.maxAttributeValue = 200
+config.maxAttributeValue = 9999
 
 -- The maximum value that Speed is allowed to have
 -- Note: Speed is given special treatment because of the Boots of Blinding Speed
-config.maxSpeedValue = 365
+config.maxSpeedValue = 9999
 
 -- The maximum value that any skill except Acrobatics is allowed to have
-config.maxSkillValue = 200
+config.maxSkillValue = 9999
 
 -- The maximum value that Acrobatics is allowed to have
 -- Note: Acrobatics is given special treatment because of the Scroll of Icarian Flight
-config.maxAcrobaticsValue = 1200
+config.maxAcrobaticsValue = 9999
 
 -- Allow modifier values to bypass allowed skill values
 config.ignoreModifierWithMaxSkill = false
@@ -237,7 +237,7 @@ config.allowFixmeCommand = true
 config.fixmeInterval = 30
 
 -- The colors used for different ranks on the server
-config.rankColors = { serverOwner = color.Orange, admin = color.Red, moderator = color.Green }
+config.rankColors = { serverOwner = color.Orange, admin = color.Purple, moderator = color.Green }
 
 -- Which numerical IDs should be used by custom menus implemented in the Lua scripts,
 -- to prevent other menu inputs from being taken into account for them
